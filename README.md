@@ -1,2 +1,1 @@
-# VortexOS
-The VortexOS proxy with an about:blank launcher!!
+Just go to the launcher.html and download the file.
