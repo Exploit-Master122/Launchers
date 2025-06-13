@@ -79,27 +79,37 @@
   </div>
 
   <script>
+    // Leave warning on main page
+    window.onbeforeunload = function () {
+      return "Leave site? Changes you made may not be saved.";
+    };
+
     function launchDarrkon() {
       const win = window.open();
       const content = `
         <!DOCTYPE html>
         <html>
-          <head>
-            <title>Classes</title>
-            <style>
-              html, body { margin: 0; height: 100%; overflow: hidden; }
-              iframe { width: 100%; height: 100%; border: none; }
-            </style>
-          </head>
-          <body>
-            <iframe src="https://thisvortexiswildandcrazyjustlikemeandyoutogether.global.ssl.fastly.net/" allowfullscreen></iframe>
-          </body>
+        <head>
+          <title>Classes</title>
+          <style>
+            html, body { margin: 0; height: 100%; overflow: hidden; }
+            iframe { width: 100%; height: 100%; border: none; }
+          </style>
+        </head>
+        <body>
+          <script>
+            window.onbeforeunload = function () {
+              return "Leave site? Changes you made may not be saved.";
+            };
+          <\/script>
+          <iframe src="https://thisvortexiswildandcrazyjustlikemeandyoutogether.global.ssl.fastly.net/" allowfullscreen></iframe>
+        </body>
         </html>`;
       win.document.write(content);
       win.document.close();
     }
 
-    // Star background
+    // Star background animation
     const canvas = document.getElementById("stars");
     const ctx = canvas.getContext("2d");
     let stars = [], numStars = 300;
