@@ -1,1 +1,1 @@
-- Download the index.html file or go to [VortexLauncher](https://exploit-master122.github.io/VortexOS-v2/)
+- Download the index.html file!!
